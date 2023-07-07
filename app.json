@@ -4,10 +4,10 @@
     "slug": "RumiLibrary",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logoIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logoIcon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
