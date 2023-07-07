@@ -46,7 +46,15 @@ export default function AppNavigator() {
         },
       }}>
         <Drawer.Screen name="Main"  component={Root} options={{headerShown: false,}}/>
-        <Drawer.Screen name="About" component={Vision} />
+        <Drawer.Screen name="About" component={Vision} options={{
+          
+          headerStyle: {
+            backgroundColor: '#002147',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, }}/> 
         
         {/* <Stack.Screen name="LIBRARY SERVICES" component={LibraryServices} />
         <Drawer.Screen name="ASK A LIBRARIAN" component={AskLibrarian} /> */}
