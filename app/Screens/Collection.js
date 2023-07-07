@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-export default function Etd() {
+export default function Collection() {
   return (
     <View>
       <Text>Collection</Text>

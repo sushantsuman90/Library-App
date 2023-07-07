@@ -5,7 +5,7 @@ import network from '../../assets/network.png'
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { Linking } from 'react-native';
 
-export default function ReferenceManagement() {
+export default function Catalogue() {
   return (
     <View style={{backgroundColor:'#fff',height:1000,paddingTop:5,}}> 
     <View style={{padding:5, left:5, }}>

@@ -4,7 +4,7 @@ import React from 'react'
 export default function People() {
   return (
     <View>
-      <Text>PlagiarismCheck</Text>
+      <Text>People</Text>
     </View>
   )
 }

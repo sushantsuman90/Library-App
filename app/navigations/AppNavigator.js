@@ -13,15 +13,15 @@ import Vision from '../Screens/Vision';
 import AskLibrarian from '../Screens/AskLibrarian';
 import E_resources from '../Screens/E_resources';
 import People from '../Screens/People';
-import E_Shodhsindhu from '../Screens/E_Shodhsindhu';
+import Services from '../Screens/Services';
 import Feedback from '../Screens/Feedback';
-import Etd from '../Screens/Etd';
+import Collection from '../Screens/Collection';
 import DigitalLibraries from '../Screens/DigitalLibraries';
 import AcademicSearch from '../Screens/AcademicSearch';
 import AcademicNetworking from '../Screens/AcademicNetworking';
-import Delnet from '../Screens/Delnet';
+import Favorites from '../Screens/Favorites';
 import Consortium from '../Screens/Consortium';
-import ReferenceManagement from '../Screens/ReferenceManagement'
+import Catalogue from '../Screens/Catalogue'
 import LibraryServices from '../Screens/LibraryServices';
 
 const Stack = createNativeStackNavigator();
@@ -101,7 +101,7 @@ function Root() {
           headerTitleStyle: {
             fontWeight: 'bold',
           }, }}/>
-         <Stack.Screen name="SERVICES" component={E_Shodhsindhu} 
+         <Stack.Screen name="SERVICES" component={Services} 
          options={{
           
           headerStyle: {
@@ -121,7 +121,7 @@ function Root() {
           headerTitleStyle: {
             fontWeight: 'bold',
           }, }}/>
-         <Stack.Screen name="COLLECTION" component={Etd} 
+         <Stack.Screen name="COLLECTION" component={Collection} 
          options={{
           
           headerStyle: {
@@ -161,7 +161,7 @@ function Root() {
           headerTitleStyle: {
             fontWeight: 'bold',
           }, }}/>
-         <Stack.Screen name="FAVORITES" component={Delnet}
+         <Stack.Screen name="FAVORITES" component={Favorites}
          options={{
           
           headerStyle: {
@@ -171,7 +171,7 @@ function Root() {
           headerTitleStyle: {
             fontWeight: 'bold',
           }, }} />
-         <Stack.Screen name="CATALOGING" component={ReferenceManagement} 
+         <Stack.Screen name="CATALOGING" component={Catalogue} 
          options={{
           
           headerStyle: {
