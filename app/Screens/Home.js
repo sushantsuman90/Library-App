@@ -28,10 +28,10 @@ import library from '../../assets/online-library.png';
 import openAccess from '../../assets/open-access.png';
 import favorite from '../../assets/favorite.png'
 import catalogue from '../../assets/catalogue.png'
-import logo from '../../assets/logo.jpeg'
+import logo from '../../assets/fav-4.png'
 import menu1 from '../../assets/menu1.png'
 import conversation from '../../assets/conversation.png'
-
+import useAuth from '../custom-hooks/useAuth'
 // const Card = ({ color, imageSource }) => {
 //   return (
 //     <View style={[styles.card, { backgroundColor: color }]}>
@@ -43,6 +43,7 @@ import conversation from '../../assets/conversation.png'
 export default function Home({navigation}) {
   const navigator = useNavigation();
   const [appIsReady, setAppIsReady] = useState(false);
+  const { currentUser, loading } = useAuth();
 
   useEffect(() => {
     async function prepare() {
@@ -125,10 +126,10 @@ export default function Home({navigation}) {
       <View style={styles.new}>
       {/* <Text>tabs</Text> */}
       </View>
-      <View><Text style={styles.headline}>ISLAMIC UNIVERSITY OF SCIENCE AND TECHNOLOGY</Text></View>
+      {/* <View><Text style={styles.headline}>ISLAMIC UNIVERSITY OF SCIENCE AND TECHNOLOGY</Text></View> */}
 
   <View style={styles.menu}>
-  <View style={styles.row}>
+  {/* <View style={styles.row}>
     <TouchableOpacity><Surface  style={styles.surface} elevation={3}>
       <Image source={icon3} style={styles.icon}/>
       <Text>HOME</Text>
@@ -139,7 +140,7 @@ export default function Home({navigation}) {
     <Text>E-RESOURCES</Text>
     </Surface>
     </TouchableOpacity>
-  </View>
+  </View> */}
   <View style={styles.row}>
   <TouchableOpacity onPress={()=>navigation.navigate("LIBRARY ALERTS")}><Surface style={styles.surface} elevation={3}>
     <Image source={icon1} style={styles.icon}/>
@@ -170,9 +171,10 @@ export default function Home({navigation}) {
     <Text>COLLECTIONS</Text>
     </Surface>
     </TouchableOpacity>
-    <TouchableOpacity onPress={()=>{Linking.openURL('http://192.168.124.143/webopac')}}><Surface style={styles.surface} elevation={3}>
-    <Image source={opac} style={styles.icon}/>
-    <Text>OPAC</Text>
+    
+    <TouchableOpacity onPress={()=>navigation.navigate("CATALOGING")}><Surface style={styles.surface} elevation={3}>
+    <Image source={catalogue} style={styles.icon}/>
+    <Text>CATALOGUES</Text>
     </Surface>
     </TouchableOpacity>
     
@@ -190,18 +192,51 @@ export default function Home({navigation}) {
     </TouchableOpacity>
     
   </View>
+  
+  { (currentUser) ?
   <View style={styles.row}>
-  <TouchableOpacity onPress={()=>navigation.navigate("FAVORITES")}><Surface style={styles.surface} elevation={3}>
+  
+    {/* <TouchableOpacity onPress={()=>navigation.navigate("CATALOGING")}><Surface style={styles.surface} elevation={3}>
+    <Image source={catalogue} style={styles.icon}/>
+    <Text>CATALOGUES</Text>
+    </Surface>
+    </TouchableOpacity> */}
+    <TouchableOpacity onPress={()=>navigation.navigate("Books")}><Surface style={styles.surface} elevation={3}>
+    <Image source={collection} style={styles.icon}/>
+    <Text>Books</Text>
+    </Surface>
+    </TouchableOpacity>
+    
+  
+  <View>
+    <TouchableOpacity onPress={()=>navigation.navigate("FAVORITES")}><Surface style={styles.surface} elevation={3}>
     <Image source={favorite} style={styles.icon}/>
     <Text>FAVORITES</Text>
     </Surface>
     </TouchableOpacity>
-    <TouchableOpacity onPress={()=>navigation.navigate("CATALOGING")}><Surface style={styles.surface} elevation={3}>
-    <Image source={catalogue} style={styles.icon}/>
-    <Text>CATALOGING</Text>
+    </View>
+    
+  
+  </View>
+  : null}
+  <View style={styles.row}>
+  <TouchableOpacity onPress={()=>{Linking.openURL('http://webopac.iust.ac.in/')}}><Surface style={styles.surface} elevation={3}>
+    <Image source={opac} style={styles.icon}/>
+    <Text>Web-OPAC</Text>
     </Surface>
     </TouchableOpacity>
-  </View>
+    </View>
+  {/* <View style={styles.row}>
+  { (currentUser) ?
+  <View>
+    <TouchableOpacity onPress={()=>navigation.navigate("Books")}><Surface style={styles.surface} elevation={3}>
+    <Image source={favorite} style={styles.icon}/>
+    <Text>Books</Text>
+    </Surface>
+    </TouchableOpacity>
+    </View>
+  : null}
+  </View> */}
   {/* <View style={styles.row}>
   <TouchableOpacity onPress={()=>navigation.navigate("ASK LIBRARIAN")}><Surface style={styles.surface} elevation={3}>
     <Image source={conversation} style={styles.icon}/>

@@ -6,9 +6,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import CustomDrawer from '../Components/CustomDrawer';
-
+import Books from '../Screens/Books';
 import Home from '../Screens/Home';
-import Main from '../Screens/Main';
 import Vision from '../Screens/Vision';
 import AskLibrarian from '../Screens/AskLibrarian';
 import E_resources from '../Screens/E_resources';
@@ -17,12 +16,14 @@ import Services from '../Screens/Services';
 import Feedback from '../Screens/Feedback';
 import Collection from '../Screens/Collection';
 import DigitalLibraries from '../Screens/DigitalLibraries';
-import AcademicSearch from '../Screens/AcademicSearch';
 import AcademicNetworking from '../Screens/AcademicNetworking';
 import Favorites from '../Screens/Favorites';
-import Consortium from '../Screens/Consortium';
 import Catalogue from '../Screens/Catalogue'
 import LibraryServices from '../Screens/LibraryServices';
+import Login from '../Screens/Login'
+import SignUp from '../Screens/SignUp';
+import UsefulLinks from '../Screens/UsefulLinks';
+import Print from '../Screens/Print';
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -46,7 +47,7 @@ export default function AppNavigator() {
         },
       }}>
         <Drawer.Screen name="Main"  component={Root} options={{headerShown: false,}}/>
-        <Drawer.Screen name="About" component={Vision} options={{
+        <Drawer.Screen name="Contact Us" component={Vision} options={{
           
           headerStyle: {
             backgroundColor: '#002147',
@@ -55,6 +56,26 @@ export default function AppNavigator() {
           headerTitleStyle: {
             fontWeight: 'bold',
           }, }}/> 
+          <Drawer.Screen name="Useful Links" component={UsefulLinks} options={{
+          
+          headerStyle: {
+            backgroundColor: '#002147',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, }}/> 
+          <Drawer.Screen name="Login" component={Login} options={{
+          
+          headerStyle: {
+            backgroundColor: '#002147',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, }}/> 
+          
+          
         
         {/* <Stack.Screen name="LIBRARY SERVICES" component={LibraryServices} />
         <Drawer.Screen name="ASK A LIBRARIAN" component={AskLibrarian} /> */}
@@ -72,6 +93,36 @@ function Root() {
        <Stack.Screen  name="Home" component={Home}
          options={{ headerShown: false }} /> 
        <Stack.Screen name="E-RESOURCES" component={E_resources} 
+       options={{
+          
+          headerStyle: {
+            backgroundColor: '#002147',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, }}/>
+          <Stack.Screen name="Books" component={Books} 
+       options={{
+          
+          headerStyle: {
+            backgroundColor: '#002147',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, }}/>
+            <Stack.Screen name="Print" component={Print} 
+       options={{
+          
+          headerStyle: {
+            backgroundColor: '#002147',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, }}/>
+          <Stack.Screen name="Sign-Up" component={SignUp} 
        options={{
           
           headerStyle: {
@@ -151,16 +202,7 @@ function Root() {
           headerTitleStyle: {
             fontWeight: 'bold',
           }, }}/>
-         <Stack.Screen name="OPAC" component={AcademicSearch} 
-         options={{
-          
-          headerStyle: {
-            backgroundColor: '#002147',
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-          }, }}/>
+         
          <Stack.Screen name="OPEN ACCESS" component={AcademicNetworking} 
          options={{
           
@@ -182,6 +224,16 @@ function Root() {
             fontWeight: 'bold',
           }, }} />
          <Stack.Screen name="CATALOGING" component={Catalogue} 
+         options={{
+          
+          headerStyle: {
+            backgroundColor: '#002147',
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          }, }}/>
+          <Stack.Screen name="Web-OPAC" component={Catalogue} 
          options={{
           
           headerStyle: {

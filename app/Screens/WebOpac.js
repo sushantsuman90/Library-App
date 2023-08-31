@@ -1,10 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Main({navigation}) {
+const WebOpac = () => {
   return (
     <View>
-      <Text>main screen</Text>
+      <Text>WebOpac</Text>
     </View>
   )
 }
+
+export default WebOpac

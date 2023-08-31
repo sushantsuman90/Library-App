@@ -13,7 +13,7 @@ import {
 
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import logo from '../../assets/logo.jpeg'
+import logo from '../../assets/fav-4.png'
 import bg from '../../assets/menu-bg.jpeg'
 
 const CustomDrawer = props => {
@@ -36,7 +36,7 @@ const CustomDrawer = props => {
               // fontFamily: 'Roboto-Medium',
               marginBottom: 5,
             }}>
-            IUST
+            Rumi Library
           </Text>
           <View style={{flexDirection: 'row'}}>
             {/* <Text

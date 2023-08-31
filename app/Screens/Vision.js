@@ -8,8 +8,14 @@ export default function Vision() {
     <View style={styles.Content}>
        <Card>
     <Card.Content>
-      <Text variant="titleLarge">Developers</Text>
-      <Text style={{padding:10,}}variant="bodyMedium">Rahila Anjum{'\n'}Bikees Jan{'\n'}Yasmeena Tabasum</Text>
+      {/* <Text variant="titleLarge"></Text> */}
+      <Text style={{padding:10,fontSize:16}}variant="bodyMedium">1-University Avenue, Awantipora, Pulwama,{'\n'}
+
+Pin: 192122, Jammu and Kashmir
+
+Phone: +91 (01933) 247954 / 247955
+
+Email: info@islamicuniversity.edu.in</Text>
     </Card.Content>
   </Card>
     </View>
@@ -24,7 +30,9 @@ const styles = StyleSheet.create({
   Content:{
     backgroundColor: "white",
     display:"flex",
-    marginTop:10,
+    marginTop:20,
     marginHorizontal: 20,
+    justifyContent:'center',
+
   },
 })
